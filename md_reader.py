@@ -50,8 +50,7 @@ class MarkDownProcess:
         image_folder = Path(self.__html_folder, 'images')
         for one_link in self.__find_images():
             one_image: Path = Path(self.__file_path, one_link)
-            os.system(
-                f'copy {one_image} {image_folder} >nul 2>&1')  # Дополнительные параметры подавляют вывод сообщений
+            os.system(f'copy {one_image} {image_folder} >nul 2>&1')  # Дополнительные параметры подавляют вывод сообщений
 
     def work(self) -> None:
         self.__read_mark()
